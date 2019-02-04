@@ -16,7 +16,7 @@
 (define(average numbers)
   (cond
     [(empty? numbers) 0]
-    [ (/ (sum-numbers numbers) (length numbers))]))
+    [ (/ (sum-numbers numbers) (+ 1 (average (cdr numbers))))]))
 
 (display "Testing average")
 (newline)
